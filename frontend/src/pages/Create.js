@@ -151,7 +151,7 @@ const Create = () => {
 
     try {
       try {
-        const healthCheck = await fetch('http://localhost:8080/allPosts', { method: 'GET' });
+        const healthCheck = await fetch('https://demo-deployment-latest-p92p.onrender.com/allPosts', { method: 'GET' });
         if (!healthCheck.ok) {
           throw new Error('Backend is not responding. Please ensure the Spring Boot server is running on port 8080.');
         }
@@ -176,7 +176,7 @@ const Create = () => {
       console.log('Form data before transformation:', formData);
       console.log('Transformed data being sent to backend:', postData);
 
-      const response = await fetch('http://localhost:8080/post', {
+      const response = await fetch('https://demo-deployment-latest-p92p.onrender.com/post', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

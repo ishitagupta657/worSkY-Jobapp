@@ -12,7 +12,7 @@ const BackendStatus = () => {
     setTestResult('');
 
     try {
-      const response = await fetch('http://localhost:8080/allPosts', { 
+      const response = await fetch('https://demo-deployment-latest-p92p.onrender.com/allPosts', { 
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ const BackendStatus = () => {
         employerId: 'test-employer'
       };
 
-      const response = await fetch('http://localhost:8080/post', {
+      const response = await fetch('https://demo-deployment-latest-p92p.onrender.com/post', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -59,7 +59,7 @@ const Feed = () => {
   const fetchPosts = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:8080/allPosts');
+      const response = await axios.get('https://demo-deployment-latest-p92p.onrender.com/allPosts');
       
       // Add mock data for missing fields to make the UI look better
       const enhancedPosts = response.data.map(post => ({
