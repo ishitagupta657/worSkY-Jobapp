@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://demo-deployment-latest-p92p.onrender.com/")
+@CrossOrigin(origins = "https://worsk.netlify.app/")
 public class PostController
 {
 
