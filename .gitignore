@@ -1,2 +1,12 @@
 .env
 frontend/node_modules/
+
+# Ignore backend build artifacts
+backend/target/
+
+# Ignore frontend build artifacts
+frontend/build/
+frontend/build/*
+
+# OS files
+.DS_Store
