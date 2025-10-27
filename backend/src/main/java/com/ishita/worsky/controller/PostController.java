@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://demo-deployment-latest-p92p.onrender.com/")
 public class PostController
 {
 
