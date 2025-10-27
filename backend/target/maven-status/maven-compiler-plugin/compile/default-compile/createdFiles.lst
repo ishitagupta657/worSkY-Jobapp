@@ -1,0 +1,6 @@
+com/ishita/worsky/controller/PostController.class
+com/ishita/worsky/WorSkyApplication.class
+com/ishita/worsky/repository/SearchRepository.class
+com/ishita/worsky/repository/SearchRepositoryImpl.class
+com/ishita/worsky/model/Post.class
+com/ishita/worsky/repository/PostRepository.class
