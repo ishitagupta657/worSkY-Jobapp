@@ -255,3 +255,15 @@ For support and questions:
 
 **Built with ❤️ by experienced developers for the modern job market**
 
+
+
+## Command to Deploy Backend
+Simply rebuild your image with an explicit platform flag 👇
+
+Step 1:
+docker buildx build --platform linux/amd64 -t ishitagupta657/demo-deployment:latest ./backend
+
+Step 2:
+docker push ishitagupta657/demo-deployment:latest
+
+Step 3: Rebuild on the Render Website

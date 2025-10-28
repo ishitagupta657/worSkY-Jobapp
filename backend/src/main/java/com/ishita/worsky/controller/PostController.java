@@ -6,15 +6,10 @@ import com.ishita.worsky.repository.SearchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-
-//import javax.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpServletResponse;
-
-import java.io.IOException;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://worsk.netlify.app/")
+@CrossOrigin(origins = "*")
 public class PostController
 {
 
@@ -27,21 +22,18 @@ public class PostController
    
 
     @GetMapping("/allPosts")
-    @CrossOrigin
     public List<Post> getAllPosts()
     {
         return repo.findAll();
     }
     // posts/java
     @GetMapping("/posts/{text}")
-    @CrossOrigin
     public List<Post> search(@PathVariable String text)
     {
         return srepo.findByText(text);
     }
 
-    @PostMapping("/post")
-    @CrossOrigin
+    @PostMapping(value = "/post", consumes = "application/json", produces = "application/json")
     public Post addPost(@RequestBody Post post)
     {
         System.out.println("Received job posting request:");

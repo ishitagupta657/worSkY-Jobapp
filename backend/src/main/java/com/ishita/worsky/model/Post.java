@@ -21,7 +21,7 @@ public class Post {
     private String requirements;
     private String benefits;
     private String contactEmail;
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ", timezone = "UTC")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", timezone = "UTC")
     private Date applicationDeadline;
     private String status;
     private int applications;
@@ -37,23 +37,6 @@ public class Post {
         this.views = 0;
     }
 
-    // Custom setter for applicationDeadline to handle string dates
-    public void setApplicationDeadline(Object applicationDeadline) {
-        if (applicationDeadline instanceof String) {
-            try {
-                this.applicationDeadline = new Date((String) applicationDeadline);
-            } catch (Exception e) {
-                // If parsing fails, set to null
-                this.applicationDeadline = null;
-            }
-        } else if (applicationDeadline instanceof Date) {
-            this.applicationDeadline = (Date) applicationDeadline;
-        } else if (applicationDeadline instanceof Long) {
-            this.applicationDeadline = new Date((Long) applicationDeadline);
-        } else {
-            this.applicationDeadline = null;
-        }
-    }
 
     public String getId() {
         return id;
